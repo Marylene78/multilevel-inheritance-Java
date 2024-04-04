@@ -1,0 +1,20 @@
+class Employee {
+    double salary = 40000;
+
+    static class Allowance extends Employee {
+        int bonus = 8000;
+    }
+     static class Tax extends Allowance {
+        int payee = 4000;
+    }
+
+    public static void main(String[] args) {
+        Employee employee = new Employee();
+        Allowance allowance = new Allowance();
+        Tax tax = new Tax();
+
+        System.out.println("The salary is " + employee.salary);
+        System.out.println("The bonus is " + allowance.bonus);
+          System.out.println("The tax is " + tax.payee);
+    }
+}
